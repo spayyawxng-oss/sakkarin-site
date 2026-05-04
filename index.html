@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Öħ Säkkärin Ðrüm Söłö
+</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family: Arial;
+  background:#0a0a0a;
+  color:#fff;
+}
+
+/* NAV */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#000;
+}
+nav a{
+  color:#aaa;
+  margin:0 10px;
+  text-decoration:none;
+}
+nav a:hover{
+  color:#00ffcc;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+.hero h1{
+  font-size:2.5rem;
+  color:#00ffcc;
+}
+.hero p{
+  color:#aaa;
+  margin:10px 0;
+}
+.btn{
+  padding:12px 25px;
+  background:#00ffcc;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+/* GRID */
+.container{
+  padding:40px 20px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+}
+.price{
+  color:#00ffcc;
+  font-size:20px;
+}
+
+/* QR POPUP */
+#popup{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  text-align:center;
+}
+#popup img{
+  width:300px;
+  margin-top:50px;
+}
+
+a{
+  color:#00ffcc;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h3>⚡ Öħ Säkkärin Ðrüm Söłö ⚡
+  <nav>
+    <a href="#shop">สินค้า</a>
+    <a href="#work">ผลงาน</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <img src="me.jpg" style="
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #00ffcc;
+    margin-bottom:20px;
+  ">
+
+  <h1>Öħ Säkkärin Ðrüm Söłö</h1>
+  <p>รับเขียนโน๊ตกลอง / มืออาชีพ</p>
+
+  <button class="btn" onclick="openPay()">สั่งซื้อ</button>
+
+</section>
+
+
+<!-- SHOP -->
+<section id="shop" class="container">
+  <h2>📚 บริการ</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>เขียนโน๊ตกลอง</h3>
+      <p>เริ่มต้น</p>
+      <div class="price">100 บาท</div>
+      <button class="btn" onclick="openPay()">ซื้อ</button>
+    </div>
+
+    <div class="card">
+      <h3>Preset</h3>
+      <p>880 / R70 / Avatar PD705</p>
+      <div class="price">ชุดเสียง</div>
+      <button class="btn" onclick="openPay()">ซื้อ</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="container">
+  <h2>🔥 ผลงาน</h2>
+
+  <p>
+    ▶ ดูผลงาน:
+    <br><br>
+    <a href="https://www.youtube.com/watch?v=l3EZXGfpvCc" target="_blank">
+      เปิด YouTube
+    </a>
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container">
+  <h2>📩 ติดต่อ</h2>
+
+  <p>
+    👉 Facebook:
+    <br>
+    <a href="https://www.facebook.com/KHUNSAKKARIN54" target="_blank">
+      เปิด Facebook
+    </a>
+  </p>
+
+</section>
+
+<!-- QR POPUP -->
+<div id="popup" onclick="closePay()">
+  <h2>สแกนจ่ายเงิน</h2>
+
+  <!-- 🔥 QR ของมึง -->
+  <img src="qr.jpg">
+
+  <p>ทัก Facebook ก่อนโอน</p>
+
+  <br>
+  <a href="https://www.facebook.com/KHUNSAKKARIN54" target="_blank">
+    <button class="btn">ทักแชท</button>
+  </a>
+
+</div>
+
+<script>
+function openPay(){
+  document.getElementById("popup").style.display="block";
+}
+function closePay(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>
+
